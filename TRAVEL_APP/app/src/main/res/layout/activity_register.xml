@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="358dp"
+        android:layout_height="366dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+        <EditText
+            android:id="@+id/id_text"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="아이디" />
+
+        <EditText
+            android:id="@+id/pw_text"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="비밀번호" />
+
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="이름" />
+
+        <EditText
+            android:id="@+id/birth_text"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="생년월일(8자리)" />
+
+        <LinearLayout
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/gender_text"
+                android:layout_width="44dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:text="성별"
+                android:textAlignment="center"
+                android:textColor="#6A6565"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_gender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/gender_button_male"
+                    android:layout_width="13dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="남" />
+
+                <RadioButton
+                    android:id="@+id/gender_button_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="여 " />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/email_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="이메일" />
+
+        <EditText
+            android:id="@+id/hp_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="핸드폰 번호" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원가입" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
