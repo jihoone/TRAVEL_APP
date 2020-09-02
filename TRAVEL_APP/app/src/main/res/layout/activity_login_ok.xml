@@ -24,10 +24,11 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <TextView
-            android:id="@+id/id_text"
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="32dp"
-            android:text="아이디" />
+            android:text="아이디"
+            tools:ignore="DuplicateIds" />
 
         <TextView
             android:id="@+id/id_text"
@@ -37,7 +38,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
         <TextView
-            android:id="@+id/pw_text"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:text="비밀번호" />
