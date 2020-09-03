@@ -35,5 +35,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> refs/remotes/origin/minseok
     }
 }
