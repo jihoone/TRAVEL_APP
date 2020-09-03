@@ -27,29 +27,13 @@ public class LoginActivity extends AppCompatActivity {
         Button login_button = (Button) findViewById(R.id.login_button);
         TextView register_button = (TextView) findViewById(R.id.register_button);
 
-//        register_button.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view){
-//                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
-//                LoginActivity.this.startActivity(registerIntent);
-//            }
-//        });
-
         register_button.setOnClickListener(new View.OnClickListener(){
+            @Override
             public void onClick(View view){
-                try{
-                    Toast.makeText(LoginActivity.this, "버튼눌림", Toast.LENGTH_SHORT).show();
-                    String result;
-                    String id = id_text.getText().toString();
-                    String pw = pw_text.getText().toString();
-
-                    DbConnActivity task = new DbConnActivity();
-                    result = task.execute(id, pw).get();
-
-                }catch (Exception e ){
-                    Log.i("DBtest",".......ERROR........!");
-                }
+                Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                LoginActivity.this.startActivity(registerIntent);
             }
         });
+
     }
 }
