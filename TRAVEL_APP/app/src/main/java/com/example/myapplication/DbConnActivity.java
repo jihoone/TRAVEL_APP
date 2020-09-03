@@ -10,7 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class DbConnActivity extends AsyncTask<String , Void, String> {
+public class DbConnActivity extends AsyncTask<String ,String, String, Integer, String, String> {
     String sendMsg, receiveMsg;
 
     @Override
