@@ -14,7 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class DbConnActivity extends AsyncTask<String ,String, String, Integer, String, String> {
+public class DbConnActivity extends AsyncTask<String , Void, String> {
     String sendMsg, receiveMsg;
     static String aaa = "안들어옴";
     @Override
