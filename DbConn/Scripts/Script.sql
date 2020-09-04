@@ -1,0 +1,3 @@
+SELECT ID FROM userTBL WHERE ID = 'sms0430';
+
+SELECT * FROM userTBL;
