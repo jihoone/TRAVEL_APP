@@ -20,7 +20,7 @@
             android:id="@+id/welcome_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="로그인성공"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <TextView

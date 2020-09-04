@@ -1,8 +1,9 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,7 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import static com.example.myapplication.DbConnActivity.aaa;
+import static com.example.myapplication.RegisterRequest.aaa;
 
 public class RegisterActivity extends AppCompatActivity {
     EditText id_text, pw_text, name_text, birth_text, email_text, hp_text;
@@ -46,8 +47,23 @@ public class RegisterActivity extends AppCompatActivity {
                     String email = email_text.getText().toString();
                     String hp  = hp_text.getText().toString();
 
-                    DbConnActivity task = new DbConnActivity();
+                    RegisterRequest task = new RegisterRequest();
                     result = task.execute(id, pw, name, birth, email, hp).get();
+                    if(result.equals("SUCCESS")){
+                        AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                        builder.setMessage("회원가입 성공")
+                                .setPositiveButton("확인",null)
+                                .create()
+                                .show();
+                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                        RegisterActivity.this.startActivity(intent);
+                    }else{
+                        AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                        builder.setMessage("회원가입 실패")
+                                .setNegativeButton("다시 시도",null)
+                                .create()
+                                .show();
+                    }
                     Toast.makeText(RegisterActivity.this, aaa, Toast.LENGTH_SHORT).show();
 
                 }catch (Exception e ){
