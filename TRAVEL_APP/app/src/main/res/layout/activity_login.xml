@@ -1,27 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:background="@color/backGround"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    >
 
     <LinearLayout
         android:layout_width="393dp"
         android:layout_height="540dp"
         android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_foreground">
+        </androidx.appcompat.widget.AppCompatImageView>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <EditText
             android:id="@+id/id_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="아이디"
-            android:inputType="textPersonName" />
+            android:hint="@string/idinput"
+            android:inputType="textPersonName"
+            android:importantForAutofill="no" />
 
 
         <EditText
@@ -29,24 +51,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="비밀번호"
-            android:inputType="textPassword" />
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:importantForAutofill="no" />
 
         <Button
             android:id="@+id/login_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="로그인"
+            android:text="@string/login"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/register_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="회원가입"
+            android:text="@string/register"
             android:gravity="center_horizontal"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
