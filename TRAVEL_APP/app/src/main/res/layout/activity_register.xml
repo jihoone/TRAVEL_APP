@@ -25,11 +25,12 @@
             android:hint="아이디" />
 
         <EditText
+            android:inputType="textPassword"
             android:id="@+id/pw_text"
             android:layout_width="357dp"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:hint="비밀번호" />
+            android:hint="비밀번호 (8자리 이)" />
 
         <EditText
             android:id="@+id/name_text"
@@ -96,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:hint="핸드폰 번호" />
+            android:hint="핸드폰 번호이 (-없)" />
 
         <Button
             android:id="@+id/register_button"
