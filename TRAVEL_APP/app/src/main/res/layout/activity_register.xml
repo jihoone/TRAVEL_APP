@@ -7,14 +7,25 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     android:background="@color/backGround">
-
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="50dp"
+    app:cardCornerRadius="15dp"
+    android:elevation="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
     <LinearLayout
         android:layout_width="350dp"
-        android:layout_height="500dp"
+        android:layout_height="550dp"
         android:orientation="vertical"
         android:gravity="top"
         android:layout_gravity="center"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -32,77 +43,122 @@
             android:textColor="@color/backGround"
             android:textStyle="bold">
         </androidx.appcompat.widget.AppCompatTextView>
-        <EditText
-            android:id="@+id/id_text"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="@drawable/rounded_edittext"
-            android:textColorHint="@color/gray"
-            android:hint="아이디" />
+        <com.google.android.material.textfield.TextInputLayout
 
-        <EditText
-            android:inputType="textPassword"
-            android:id="@+id/pw_text"
+            android:layout_gravity="center"
+            android:gravity="bottom"
             android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="5dp"
+            android:hint="아이디"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
+
+            android:textColorHint="@color/gray"
+            app:hintTextColor="@color/colorAccent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true"
+            >
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/id_text"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+
             android:layout_gravity="center"
             android:gravity="center"
-            android:background="@drawable/rounded_edittext"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
             android:hint="비밀번호 (8자리 이상)"
-            android:textColorHint="@color/gray" />
-
-        <EditText
-            android:id="@+id/name_text"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_edittext"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
+            app:hintTextColor="@color/colorAccent"
             android:textColorHint="@color/gray"
-            android:hint="이름" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/gray">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/pw_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
 
-        <EditText
-            android:id="@+id/birth_text"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rounded_edittext"
+            android:gravity="center"
+            android:layout_width="300dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="55dp"
+            android:hint="이름"
+            app:hintTextColor="@color/colorAccent"
             android:textColorHint="@color/gray"
-            android:hint="생년월일(8자리)" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true"
+            >
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="300dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="55dp"
+            android:hint="생년월일 (8자리)"
+            app:hintTextColor="@color/colorAccent"
+            android:textColorHint="@color/gray"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true"
+            >
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/birth_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_width="300dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:orientation="horizontal"
-            android:background="@drawable/rounded_edittext">
+            >
             <TextView
                 android:layout_marginLeft="10dp"
                 android:id="@+id/gender_text"
                 android:layout_width="44dp"
                 android:layout_height="32dp"
                 android:gravity="center_vertical"
-                android:text="성별"
+                android:text="성별 : "
                 android:textAlignment="center"
-                android:textColor="@color/gray"
-                android:textSize="18sp"
+                android:textSize="18dp"
+                android:textColor="@color/colorPrimaryDark"
                 tools:ignore="RtlCompat" />
             <RadioGroup
-                android:layout_marginLeft="10dp"
+
+                android:layout_marginLeft="30dp"
                 android:id="@+id/radioGroup_gender"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:gravity="center">
+                android:gravity="center"
+                >
 
                 <RadioButton
                     android:id="@+id/gender_button_male"
@@ -111,9 +167,12 @@
                     android:layout_weight="1"
                     android:text="남"
                     android:textColor="@color/gray"
-                    android:buttonTint="@color/gray"/>
+                    android:buttonTint="@color/gray"
+
+                    />
 
                 <RadioButton
+                    android:layout_marginLeft="20dp"
                     android:id="@+id/gender_button_female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -123,31 +182,50 @@
                     android:buttonTint="@color/gray"/>
             </RadioGroup>
         </LinearLayout>
-
-        <EditText
-            android:layout_marginTop="10dp"
-            android:id="@+id/email_text"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:gravity="center"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_gravity="center"
-            android:background="@drawable/rounded_edittext"
-            android:textColorHint="@color/gray"
-            android:hint="이메일" />
-
-        <EditText
-            android:layout_marginTop="10dp"
-            android:id="@+id/hp_text"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
             android:gravity="center"
-            android:layout_gravity="center"
-            android:background="@drawable/rounded_edittext"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:hint="이메일"
+            app:hintTextColor="@color/colorAccent"
             android:textColorHint="@color/gray"
-            android:hint="핸드폰 번호 ( - 제외)" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true"
+            android:includeFontPadding="false"
+
+            >
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_gravity="bottom"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="300dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="55dp"
+            android:hint="핸드폰 번호 ( - 제외)"
+            app:hintTextColor="@color/colorAccent"
+            android:textColorHint="@color/gray"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true"
+            >
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/hp_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:id="@+id/register_button"
             android:layout_width="200dp"
             android:layout_height="40dp"
@@ -155,7 +233,10 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="회원가입"
-            android:textColor="@color/colorAccent"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"/>
     </LinearLayout>
+</androidx.cardview.widget.CardView>
+
 
 </LinearLayout>

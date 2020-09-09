@@ -8,8 +8,7 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     >
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_marginTop="70dp"
         android:layout_width="350dp"
         android:layout_height="500dp"
@@ -20,58 +19,82 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/linearbackground">
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_marginTop="20dp"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@mipmap/travel">
-        </androidx.appcompat.widget.AppCompatImageView>
-        <EditText
-            android:layout_marginTop="60dp"
-            android:id="@+id/id_text"
-            android:layout_width="300dp"
-            android:layout_gravity="center"
-            android:layout_height="40dp"
-            android:textColorHint="@color/gray"
-            android:ems="10"
-            android:hint="@string/idinput"
-            android:gravity="center"
-            android:inputType="textPersonName"
-            android:importantForAutofill="no"
-            android:background="@drawable/rounded_edittext"/>
-        <EditText
-            android:id="@+id/pw_text"
-            android:layout_width="300dp"
-            android:textColorHint="@color/gray"
-            android:layout_gravity="center"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:ems="10"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:importantForAutofill="no"
-            android:background="@drawable/rounded_edittext"
-            android:gravity="center"/>
-        <Button
-            android:id="@+id/login_button"
-            android:layout_gravity="center"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/login"
-            android:textColor="@color/colorAccent"
-            tools:ignore="MissingConstraints"
-            android:background="@drawable/buttonshape"/>
-        <TextView
-            android:id="@+id/register_button"
-            android:layout_marginTop="10dp"
+        android:background="@drawable/linearbackground"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:gravity="center_horizontal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button"
-            tools:ignore="MissingConstraints" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@mipmap/travel">
+            </androidx.appcompat.widget.AppCompatImageView>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="300dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="55dp"
+                android:hint="ID"
+                app:hintTextColor="@color/colorAccent"
+                android:textColorHint="@color/gray"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:errorEnabled="true">
+                <EditText
+                    android:id="@+id/id_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:importantForAutofill="no"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="300dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="55dp"
+
+                android:hint="P/W"
+                app:hintTextColor="@color/colorAccent"
+                android:textColorHint="@color/gray"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:errorEnabled="true">
+                <EditText
+                    android:id="@+id/pw_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:importantForAutofill="no" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/login"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints"
+                android:background="@drawable/buttonshape"/>
+            <TextView
+                android:id="@+id/register_button"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
