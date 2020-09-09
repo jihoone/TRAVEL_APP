@@ -7,5 +7,6 @@
     <color name="mainBox">#f6f7fb</color>
     <color name="checkColor">#2EF0C2</color>
     <color name="fontAccent">#f55f4b</color>
+    <color name="gray">#ccd5df</color>
 
 </resources>
