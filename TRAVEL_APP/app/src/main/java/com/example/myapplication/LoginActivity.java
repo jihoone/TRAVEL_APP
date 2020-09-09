@@ -29,6 +29,15 @@ public class LoginActivity extends AppCompatActivity {
 
         final Button login_button = (Button) findViewById(R.id.login_button);
         TextView register_button = (TextView) findViewById(R.id.register_button);
+        final Button skip_button = (Button) findViewById(R.id.skip_button);
+
+        skip_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent skipIntent = new Intent(LoginActivity.this, HorizontalNtbActivity.class);
+                LoginActivity.this.startActivity(skipIntent);
+            }
+        });
 
         register_button.setOnClickListener(new View.OnClickListener(){
             @Override
