@@ -1,11 +1,13 @@
 package com.example.myapplication;
 
+import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText id_text = (EditText) findViewById(R.id.id_text);
         final EditText pw_text = (EditText) findViewById(R.id.pw_text);
 
-        Button login_button = (Button) findViewById(R.id.login_button);
+        final Button login_button = (Button) findViewById(R.id.login_button);
         TextView register_button = (TextView) findViewById(R.id.register_button);
 
         register_button.setOnClickListener(new View.OnClickListener(){
@@ -35,10 +37,21 @@ public class LoginActivity extends AppCompatActivity {
                 LoginActivity.this.startActivity(registerIntent);
             }
         });
-
+        login_button.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    login_button.setBackgroundResource(R.drawable.buttonshapecolored);
+                }else if(motionEvent.getAction()==MotionEvent.ACTION_UP){
+                    login_button.setBackgroundResource(R.drawable.buttonshape);
+                }
+                return false;
+            }
+        });
         login_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+
                 try{
                     Toast.makeText(LoginActivity.this, "버튼눌림", Toast.LENGTH_SHORT).show();
                     String result;

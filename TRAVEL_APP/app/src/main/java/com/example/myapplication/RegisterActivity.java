@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,11 +30,22 @@ public class RegisterActivity extends AppCompatActivity {
         email_text = (EditText) findViewById(R.id.email_text);
         hp_text = (EditText) findViewById(R.id.hp_text);
 
-        Button register_button = (Button) findViewById(R.id.register_button);
+        final Button register_button = (Button) findViewById(R.id.register_button);
 
         RadioGroup gender_select = (RadioGroup) findViewById(R.id.radioGroup_gender);
         gender_select.getCheckedRadioButtonId();
 
+        register_button.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction()==MotionEvent.ACTION_DOWN){
+                    register_button.setBackgroundResource(R.drawable.buttonshapecolored);
+                }else if(motionEvent.getAction()==MotionEvent.ACTION_UP){
+                    register_button.setBackgroundResource(R.drawable.buttonshape);
+                }
+                return false;
+            }
+        });
 
         register_button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
