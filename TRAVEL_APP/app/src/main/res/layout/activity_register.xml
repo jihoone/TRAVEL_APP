@@ -53,7 +53,6 @@
             android:hint="아이디"
             app:endIconMode="clear_text"
             app:endIconTint="@color/gray"
-
             android:textColorHint="@color/gray"
             app:hintTextColor="@color/colorAccent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -61,7 +60,6 @@
             >
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/id_text"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimaryDark"
@@ -97,6 +95,8 @@
             android:layout_marginTop="5dp"
             android:layout_height="55dp"
             android:hint="이름"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
             app:hintTextColor="@color/colorAccent"
             android:textColorHint="@color/gray"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -116,6 +116,8 @@
             android:layout_width="300dp"
             android:layout_marginTop="5dp"
             android:layout_height="55dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
             android:hint="생년월일 (8자리)"
             app:hintTextColor="@color/colorAccent"
             android:textColorHint="@color/gray"
@@ -187,6 +189,8 @@
             android:gravity="center"
             android:layout_width="300dp"
             android:layout_height="55dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
             android:hint="이메일"
             app:hintTextColor="@color/colorAccent"
             android:textColorHint="@color/gray"
@@ -209,6 +213,8 @@
             android:gravity="center"
             android:layout_width="300dp"
             android:layout_marginTop="5dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/gray"
             android:layout_height="55dp"
             android:hint="핸드폰 번호 ( - 제외)"
             app:hintTextColor="@color/colorAccent"
