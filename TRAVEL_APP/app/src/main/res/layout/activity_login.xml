@@ -93,6 +93,13 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button"
                 tools:ignore="MissingConstraints" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/skip_button"
+                android:text="s">
+
+            </androidx.appcompat.widget.AppCompatButton>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
