@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HorizontalNtbActivity"
+    android:orientation="vertical"
+    android:weightSum="4">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/bg_round_rect"
+        android:gravity="center"
+        android:text="Navigation"
+        android:textColor="#9b92b3"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Map_Button"
+        android:layout_width="match_parent"
+        android:layout_margin="30dp"
+        android:layout_height="40dp"
+        android:onClick="onClick"
+        android:text="Google_Map">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+</LinearLayout>

@@ -1,11 +1,13 @@
 package com.example.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.viewpager.widget.PagerAdapter;
@@ -27,8 +29,14 @@ public class HorizontalNtbActivity extends Activity {
         initUI();
     }
 
+    public void onClick(View view){
+        startActivity(new Intent("com.example.myapplication.Google_Map"));
+    }
+
     private void initUI() {
         final ViewPager viewPager = (ViewPager) findViewById(R.id.vp_horizontal_ntb);
+
+
         viewPager.setAdapter(new PagerAdapter() {
             @Override
             public int getCount() {
@@ -47,14 +55,22 @@ public class HorizontalNtbActivity extends Activity {
 
             @Override
             public Object instantiateItem(final ViewGroup container, final int position) {
-                final View view = LayoutInflater.from(
-                        getBaseContext()).inflate(R.layout.item_vp, null, false);
+                if (position == 3) {
+                    final View view = LayoutInflater.from(
+                            getBaseContext()).inflate(R.layout.item_flag, null, false);
+                    container.addView(view);
+                    return view;
 
-                final TextView txtPage = (TextView) view.findViewById(R.id.txt_vp_item_page);
-                txtPage.setText(String.format("Page #%d", position));
+                } else {
+                    final View view = LayoutInflater.from(
+                            getBaseContext()).inflate(R.layout.item_vp, null, false);
 
-                container.addView(view);
-                return view;
+                    final TextView txtPage = (TextView) view.findViewById(R.id.txt_vp_item_page);
+                    txtPage.setText(String.format("Page #%d", position));
+
+                    container.addView(view);
+                    return view;
+                }
             }
         });
 
